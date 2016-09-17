@@ -2,4 +2,4 @@ select lalalalala
 
 select otra cosa
 
-vales verga
+select * from usuario
