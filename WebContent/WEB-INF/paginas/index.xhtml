@@ -1,0 +1,137 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                template="/template/general.xhtml">
+    <ui:define name="title">
+        <h:outputText value="#{etiquetas['seleccione.una.opcion']}" />
+    </ui:define>
+
+    <ui:define name="content">
+
+        <h:form>
+            <div align="center">
+                <h:panelGrid columns="5" columnClasses="columnHome,columnHome,columnHome,columnHome,columnHome">
+                    <h:commandLink action="/paginas/parametros/parametroLista.jsf" rendered="#{sesionCtrl.administrador}">
+                        <h:panelGrid class="botonHome">
+                            <h:graphicImage value="/img/parametros.png"/>
+                            <h:outputText value="#{etiquetas['parametros']}"/>
+                        </h:panelGrid>
+                    </h:commandLink>
+
+                    <h:commandLink action="/paginas/usuarios/usuarioLista.jsf" rendered="#{sesionCtrl.administrador}">
+                        <h:panelGrid class="botonHome">
+                            <h:graphicImage value="/img/usuarios.png"/>
+                            <h:outputText value="#{etiquetas['usuarios']}"/>
+                        </h:panelGrid>
+                    </h:commandLink>
+
+                    <h:commandLink action="/paginas/personas/personaLista.jsf" rendered="#{sesionCtrl.administrador or
+                                                                                           sesionCtrl.coordinador or 
+                                                                                           sesionCtrl.tecnicoResponsable or 
+                                                                                           sesionCtrl.observador}">
+                        <h:panelGrid class="botonHome">
+                            <h:graphicImage value="/img/personas.png"/>
+                            <h:outputText value="#{etiquetas['fichas.nna']}"/>
+                        </h:panelGrid>
+                    </h:commandLink>
+
+                    <h:commandLink action="/paginas/personas/todasLasFichas.jsf" rendered="#{sesionCtrl.administrador}">
+                        <h:panelGrid class="botonHome">
+                            <h:graphicImage value="/img/fichas.png"/>
+                            <h:outputText value="#{etiquetas['todas.fichas.nna']}"/>
+                        </h:panelGrid>
+                    </h:commandLink>
+
+                    <h:commandLink action="/paginas/ficha/ficha.jsf" rendered="#{sesionCtrl.administrador or sesionCtrl.tecnicoResponsable or sesionCtrl.coordinador}">
+                        <h:panelGrid class="botonHome">
+                            <h:graphicImage value="/img/nuevaFicha.png" width="122px"/>
+                            <h:outputText value="#{etiquetas['nueva.ficha']}"/>
+                        </h:panelGrid>
+                    </h:commandLink>
+
+                    <h:commandLink action="/paginas/instituciones/institucionLista.jsf" rendered="#{sesionCtrl.administrador}">
+                        <h:panelGrid class="botonHome">
+                            <h:graphicImage value="/img/institucion.png"/>
+                            <h:outputText value="#{etiquetas['instituciones']}"/>
+                        </h:panelGrid>
+                    </h:commandLink>
+
+                    <h:commandLink action="/paginas/etnias/etniaLista.jsf" rendered="#{sesionCtrl.administrador}">
+                        <h:panelGrid class="botonHome">
+                            <h:graphicImage value="/img/etnia.png"/>
+                            <h:outputText value="#{etiquetas['etnias']}"/>
+                        </h:panelGrid>
+                    </h:commandLink>
+
+                    <h:commandLink action="/paginas/servicios/servicioLista.jsf" rendered="#{sesionCtrl.administrador}">
+                        <h:panelGrid class="botonHome">
+                            <h:graphicImage value="/img/service1.png"/>
+                            <h:outputText value="#{etiquetas['servicios']}"/>
+                        </h:panelGrid>
+                    </h:commandLink>
+
+                    <h:commandLink action="/paginas/actividadEconomica/actividadEconomicaAdmLista.jsf" rendered="#{sesionCtrl.administrador}">
+                        <h:panelGrid class="botonHome">
+                            <h:graphicImage value="/img/jobs.png"/>
+                            <h:outputText value="#{etiquetas['actividad.economica.item']}"/>
+                        </h:panelGrid>
+                    </h:commandLink>
+
+                    <h:commandLink action="/paginas/condicionesPerjudiciales/condicionesPerjudicialesLista.jsf" rendered="#{sesionCtrl.administrador}">
+                        <h:panelGrid class="botonHome">
+                            <h:graphicImage value="/img/danger.png"/>
+                            <h:outputText value="#{etiquetas['condiciones.perjudiciales.item']}"/>
+                        </h:panelGrid>
+                    </h:commandLink>
+
+                    <h:commandLink action="/paginas/admPortal/admPortalLista.jsf" rendered="#{sesionCtrl.administrador}">
+                        <h:panelGrid class="botonHome">
+                            <h:graphicImage value="/img/admPortal.png"/>
+                            <h:outputText value="#{etiquetas['administracion.portal']}"/>
+                        </h:panelGrid>
+                    </h:commandLink>
+
+                    <h:commandLink action="/paginas/pais/paisLista.jsf" rendered="#{sesionCtrl.administrador}">
+                        <h:panelGrid class="botonHome">
+                            <h:graphicImage value="/img/world.png" width="128px"/>
+                            <h:outputText value="#{etiquetas['administracion.paises']}"/>
+                        </h:panelGrid>
+                    </h:commandLink>
+
+                    <h:commandLink action="/paginas/lugaresTrabajo/lugarTrabajoLista.jsf" rendered="#{sesionCtrl.administrador}">
+                        <h:panelGrid class="botonHome">
+                            <h:graphicImage value="/img/lugarTrabajo.png" width="128px"/>
+                            <h:outputText value="#{etiquetas['lugar.trabajo']}"/>
+                        </h:panelGrid>
+                    </h:commandLink>
+
+                    <h:commandLink action="/paginas/alertasPorInstitucion/alertasPorInstitucion.jsf" rendered="#{sesionCtrl.administrador}">
+                        <h:panelGrid class="botonHome">
+                            <h:graphicImage value="/img/alertas.png" width="128px"/>
+                            <h:outputText value="#{etiquetas['alertas.remitidas.institucion']}"/>
+                        </h:panelGrid>
+                    </h:commandLink>
+
+                    <h:commandLink action="/paginas/modalidadTrabajo/modalidadTrabajoLista.jsf" rendered="#{sesionCtrl.administrador}">
+                        <h:panelGrid class="botonHome">
+                            <h:graphicImage value="/img/modalidadTrabajo.png" width="128px"/>
+                            <h:outputText value="#{etiquetas['modalidad.trabajo']}"/>
+                        </h:panelGrid>
+                    </h:commandLink>
+
+                    <h:commandLink action="/paginas/nivelInstruccion/nivelInstruccionLista.jsf" rendered="#{sesionCtrl.administrador}">
+                        <h:panelGrid class="botonHome">
+                            <h:graphicImage value="/img/nivelInstruccion.png" width="115px" height="90px"/>
+                            <h:outputText value="#{etiquetas['nivel.instruccion']}"/>
+                        </h:panelGrid>
+                    </h:commandLink>
+
+                </h:panelGrid>
+            </div>
+        </h:form>
+
+    </ui:define>
+
+</ui:composition>

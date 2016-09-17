@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <f:view contentType="text/html">
+        <h:head>
+            <title>SURTI</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+            <link type="text/css"
+                  href="#{facesContext.externalContext.requestContextPath}/css/surti.css"
+                  rel="stylesheet" media="screen" />
+        </h:head>
+
+        <h:body>
+            <div id="contenenedor" style="width:900px;margin:auto;">
+                <div style="width:100%;text-align: center">
+                    <h:graphicImage value="/img/surti-login.png"/>
+                </div><!--centrado --> 
+                <!-- Begin Wrapper -->
+                <br />
+                <div style="width:100%;text-align: center">
+                    <h:outputText value="Credenciales incorrectas" class="mensajeError" rendered="#{param.error==1}"/>
+                </div>
+                <br />
+                <br />           
+
+                <form method="POST" action="j_security_check">
+
+                    <!-- Begin Right Column -->
+                    <h:panelGrid class="loginPanel" cellpadding="0" cellspacing="0" columns="1" id="cuadroLogin" columnClasses="columnaLoginRow" headerClass="headerPanel" style="width:400px;margin:auto;">
+                        <f:facet name="header">
+                            <h:outputText value="Ingreso al Sistema"/>
+                        </f:facet>
+                        <h:outputLabel value="Usuario:"/><input type="text" name="j_username" style="width:98%;" />
+                        <h:outputLabel value="Clave:"/><input type="password" name="j_password" style="width:98%;" />
+                        <h:panelGrid style="text-align: center;width:100%">
+                            <input type="image" src="#{facesContext.externalContext.requestContextPath}/img/login.png"  />
+                        </h:panelGrid>
+
+                        <h:panelGrid style="text-align: center;width:100%">
+                            <h:outputLink value="#{facesContext.externalContext.requestContextPath}/paginas/olvidoContrasenia.jsf">
+                                <h:outputText value="#{etiquetas['olvido.contrasenia']}"/>
+                            </h:outputLink>
+                        </h:panelGrid>
+
+                    </h:panelGrid>
+                </form>      
+
+                <div style="width:100%;text-align: center;margin-top: 2px;">
+                    <h:outputFormat value="#{mensajes['copyright']}">
+                        <f:param value="#{usuarioCtrl.currentYearString}"/>
+                    </h:outputFormat>
+                </div><!--centrado --> 
+
+            </div>
+            <!-- contenedor -->
+        </h:body>
+    </f:view>
+</html>
