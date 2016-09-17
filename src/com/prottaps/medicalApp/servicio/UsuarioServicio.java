@@ -3,34 +3,22 @@
  * 
 * Thu Sep 26 17:17:42 ECT 2013
  */
-//package ec.gob.mrl.peti.service;
+//package com.prottaps.medicalApp.servicio;
+//
+//import java.security.NoSuchAlgorithmException;
+//import java.util.ArrayList;
+//import java.util.List;
 //
 //import javax.ejb.EJB;
 //import javax.ejb.Stateless;
 //
-//import com.saviasoft.persistence.util.dao.GenericDao;
-//import com.saviasoft.persistence.util.service.impl.GenericServiceImpl;
-//
-//import ec.gob.mrl.peti.dao.UsuarioDao;
-//import ec.gob.mrl.peti.exception.RecuperaClaveExcepcion;
-//import ec.gob.mrl.peti.exception.UsuarioInactivoExcepcion;
-//import ec.gob.mrl.peti.model.Usuario;
-//import ec.gob.mrl.peti.util.MailMessage;
-//import ec.gob.mrl.peti.util.Md5;
-//import ec.gob.mrl.peti.util.PasswordGenerator;
-//import ec.gov.mrl.peti.constantes.EstadoEnum;
-//import ec.gov.mrl.peti.constantes.ParametroEnum;
-//import java.security.NoSuchAlgorithmException;
-//import java.util.ArrayList;
-//import java.util.List;
-//import org.apache.commons.lang.RandomStringUtils;
+//import com.prottaps.medicalApp.constantes.EstadoEnum;
+//import com.prottaps.medicalApp.modelo.Usuario;
 //
 //@Stateless(name = "UsuarioServicio")
-//public class UsuarioServicioImpl extends GenericServiceImpl<Usuario, String>
-//        implements UsuarioServicio {
+//public class UsuarioServicioImpl extends GenericServiceImpl<Usuario, String> {
 //
-//    @EJB
-//    private UsuarioDao usuarioDao;
+//
 //    @EJB
 //    private ClienteQueueMailServicio clienteQueueMailServicio;
 //    @EJB
@@ -162,25 +150,5 @@
 //        System.out.println("sale generaCadenaAleatoria");
 //    }
 //
-//    @Override
-//    public void creaYEnviaClaveUsuario(Usuario usuario) throws NoSuchAlgorithmException {
-//        create(usuario);
-//        generaCadenaAleatoriaYEnviaMail(usuario.getIdentificacion(), usuario.getEmail());
-//    }
 //
-//    @Override
-//    public Usuario obtieneUsuarioXIdentificacion(String identificacion) {
-//        return findByPk(identificacion);
-//    }
-//
-//    @Override
-//    public Long obtenerTotalListadoPaginado(String nombre, String apellido, String cedula, Long institucionId) {
-//        return usuarioDao.obtenerTotalListadoPaginado(nombre, apellido, cedula, institucionId);
-//    }
-//
-//    @Override
-//    public List<Usuario> obtenerListadoPaginado(String nombre, String apellido, String cedula, Long institucionId,
-//            int filas, int posicionInicial) {
-//        return usuarioDao.obtenerListadoPaginado(nombre, apellido, cedula, institucionId, filas, posicionInicial);
-//    }
 //}
