@@ -32,7 +32,7 @@ public abstract class CrudServiceCoreImpl extends CrudServiceImpl implements Cru
     /**
      * Objeto que maneja las operaciones de persistencia.
      */
-    @PersistenceContext(name = "punit")
+    @PersistenceContext(name = "medicusDS")
     private EntityManager punit;
 
     /**

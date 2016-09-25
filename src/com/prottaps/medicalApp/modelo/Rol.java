@@ -17,7 +17,11 @@ import com.prottaps.medicalApp.constantes.EstadoEnum;
 @Table(name = "ROL")
 public class Rol implements Serializable {
 
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 7827644225154012814L;
+	@Id
     @Column(name = "id")
     private String id;//atado a RolEnum
     @Column(name = "descripcion", length = 500)
