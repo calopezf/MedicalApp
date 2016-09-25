@@ -11,7 +11,7 @@ import javax.persistence.Temporal;
 import javax.persistence.Transient;
 
 @Entity
-@Table(name = "DATOS_PERSONALES", schema = "sch_surti")
+@Table(name = "DATOS_PERSONALES")
 public class DatosPersonales implements Serializable {
 
     @Id

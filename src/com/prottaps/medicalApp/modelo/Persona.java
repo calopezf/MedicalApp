@@ -12,8 +12,8 @@ import javax.persistence.TableGenerator;
 import javax.persistence.Transient;
 
 @Entity
-@Table(name = "PERSONA", schema = "sch_surti")
-@TableGenerator(table = "SECUENCIAS", name = "GEN_PERSONA", schema = "sch_surti", pkColumnName = "NOMBRE", pkColumnValue = "PERSONA", valueColumnName = "VALOR", allocationSize = 1)
+@Table(name = "PERSONA")
+@TableGenerator(table = "SECUENCIAS", name = "GEN_PERSONA", pkColumnName = "NOMBRE", pkColumnValue = "PERSONA", valueColumnName = "VALOR", allocationSize = 1)
 public class Persona implements Serializable {
 
     @Id

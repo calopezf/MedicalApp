@@ -18,7 +18,7 @@ import javax.persistence.Transient;
 import com.prottaps.medicalApp.constantes.EstadoEnum;
 
 @Entity
-@Table(name = "USUARIO", schema = "sch_surti")
+@Table(name = "USUARIO")
 public class Usuario implements Serializable {
 
     @Id
@@ -46,7 +46,7 @@ public class Usuario implements Serializable {
 //    @ManyToMany(mappedBy = "usuarios")
 //    private List<Rol> roles;
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "usuario_rol", schema = "sch_surti", joinColumns = {
+    @JoinTable(name = "usuario_rol", joinColumns = {
         @JoinColumn(name = "usuario_identificacion", referencedColumnName = "identificacion")},
     inverseJoinColumns =
     @JoinColumn(name = "rol_id", referencedColumnName = "id"))

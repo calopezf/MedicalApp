@@ -14,7 +14,7 @@ import javax.persistence.Table;
 import com.prottaps.medicalApp.constantes.EstadoEnum;
 
 @Entity
-@Table(name = "ROL", schema = "sch_surti")
+@Table(name = "ROL")
 public class Rol implements Serializable {
 
     @Id
