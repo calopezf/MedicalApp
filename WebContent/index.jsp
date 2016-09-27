@@ -3,6 +3,6 @@
 	request.getSession().invalidate();
 %>
 <%
-	response.sendRedirect("paginas/login.html");
+	response.sendRedirect("paginas/index.jsf");
 %>
 

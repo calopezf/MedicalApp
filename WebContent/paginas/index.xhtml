@@ -13,52 +13,49 @@
         <h:form>
             <div align="center">
                 <h:panelGrid columns="5" columnClasses="columnHome,columnHome,columnHome,columnHome,columnHome">
-                    <h:commandLink action="/paginas/parametros/parametroLista.jsf" rendered="#{sesionCtrl.administrador}">
+                    <h:commandLink action="/paginas/parametros/parametroLista.jsf" >
                         <h:panelGrid class="botonHome">
                             <h:graphicImage value="/img/parametros.png"/>
                             <h:outputText value="#{etiquetas['parametros']}"/>
                         </h:panelGrid>
                     </h:commandLink>
 
-                    <h:commandLink action="/paginas/usuarios/usuarioLista.jsf" rendered="#{sesionCtrl.administrador}">
+                    <h:commandLink action="/paginas/usuarios/usuarioLista.jsf" >
                         <h:panelGrid class="botonHome">
                             <h:graphicImage value="/img/usuarios.png"/>
                             <h:outputText value="#{etiquetas['usuarios']}"/>
                         </h:panelGrid>
                     </h:commandLink>
 
-                    <h:commandLink action="/paginas/personas/personaLista.jsf" rendered="#{sesionCtrl.administrador or
-                                                                                           sesionCtrl.coordinador or 
-                                                                                           sesionCtrl.tecnicoResponsable or 
-                                                                                           sesionCtrl.observador}">
+                    <h:commandLink action="/paginas/personas/personaLista.jsf" >
                         <h:panelGrid class="botonHome">
                             <h:graphicImage value="/img/personas.png"/>
                             <h:outputText value="#{etiquetas['fichas.nna']}"/>
                         </h:panelGrid>
                     </h:commandLink>
 
-                    <h:commandLink action="/paginas/personas/todasLasFichas.jsf" rendered="#{sesionCtrl.administrador}">
+                    <h:commandLink action="/paginas/personas/todasLasFichas.jsf" >
                         <h:panelGrid class="botonHome">
                             <h:graphicImage value="/img/fichas.png"/>
                             <h:outputText value="#{etiquetas['todas.fichas.nna']}"/>
                         </h:panelGrid>
                     </h:commandLink>
 
-                    <h:commandLink action="/paginas/ficha/ficha.jsf" rendered="#{sesionCtrl.administrador or sesionCtrl.tecnicoResponsable or sesionCtrl.coordinador}">
+                    <h:commandLink action="/paginas/ficha/ficha.jsf" >
                         <h:panelGrid class="botonHome">
                             <h:graphicImage value="/img/nuevaFicha.png" width="122px"/>
                             <h:outputText value="#{etiquetas['nueva.ficha']}"/>
                         </h:panelGrid>
                     </h:commandLink>
 
-                    <h:commandLink action="/paginas/instituciones/institucionLista.jsf" rendered="#{sesionCtrl.administrador}">
+                    <h:commandLink action="/paginas/instituciones/institucionLista.jsf" >
                         <h:panelGrid class="botonHome">
                             <h:graphicImage value="/img/institucion.png"/>
                             <h:outputText value="#{etiquetas['instituciones']}"/>
                         </h:panelGrid>
                     </h:commandLink>
 
-                    <h:commandLink action="/paginas/etnias/etniaLista.jsf" rendered="#{sesionCtrl.administrador}">
+                    <h:commandLink action="/paginas/etnias/etniaLista.jsf" >
                         <h:panelGrid class="botonHome">
                             <h:graphicImage value="/img/etnia.png"/>
                             <h:outputText value="#{etiquetas['etnias']}"/>

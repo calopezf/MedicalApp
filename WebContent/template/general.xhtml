@@ -25,49 +25,8 @@
                         </ui:insert>
                     </div>
 
-                    <p:dialog  id="cambiarClaveMp" header="#{etiquetas['cambio.contrasena']}" widgetVar="cambiarClaveDgl" modal="true" height="220" width="450">  
-                        <div align="center">
-                            <div class="titulo-caja">
-                                <h:outputText value="#{etiquetas['cambio.contrasena']}"/>
-                            </div>
-                            <br/>
-                            <h:form id="cambiarClaveForm">
-                                <p:growl id="growMp" /> 
-                                <h:panelGrid columns="2" columnClasses="form-label,form-input">
-                                    <h:outputLabel for="claveActual" value="#{etiquetas['contrasena.actual']}: "/>
-                                    <h:inputSecret id="claveActual" value="#{cambiaClaveCtrl.claveActual}" maxlength="15" required="true" requiredMessage="#{etiquetas['contrasena.actual']} #{mensajes['requerido.femenino']}" validator="#{cambiaClaveCtrl.validaClaveActual}"/>
-
-                                    <h:outputLabel for="claveNueva" value="#{etiquetas['contrasena.nueva']}: "/>
-                                    <h:inputSecret id="claveNueva" value="#{cambiaClaveCtrl.claveNueva}" maxlength="15" required="true" requiredMessage="#{etiquetas['contrasena.nueva']} #{mensajes['requerido.femenino']}"/>
-
-                                    <h:outputLabel for="claveNuevaConfirma" value="#{etiquetas['confirme.contrasena.nueva']}: "/>
-                                    <h:inputSecret id="claveNuevaConfirma" value="#{cambiaClaveCtrl.confirmaClaveNueva}" maxlength="15" required="true" requiredMessage="#{etiquetas['confirme.contrasena.nueva']} #{mensajes['requerido.femenino']}"/>
-                                </h:panelGrid>
-                                <br/>
-                                <p:commandButton value="#{etiquetas['cambiar']}" action="#{cambiaClaveCtrl.cambiarClave}" update="growMp :exitoModalLi" />
-                            </h:form>
-                        </div> 
-                    </p:dialog> 
-
-                    <p:dialog id="exitoModalLi" visible="#{cambiaClaveCtrl.habreExito}" header="#{etiquetas['exito']}" widgetVar="exitoDlgLi" modal="true" closable="false">  
-                        <div align="center">
-                            <h:form>
-                                <h:outputText value="#{mensajes['clave.modificada.exito']} "/>
-                                <br/><br/>
-                                <h:commandButton value="#{etiquetas['continuar']}" action="#{cambiaClaveCtrl.cerrarExitoMp}"/>
-                            </h:form>
-                        </div>
-                    </p:dialog> 
-
-                    <p:dialog id="expiraSesionModal" header="#{etiquetas['exito']}" widgetVar="expiraSesionDlg" modal="true" closable="false">  
-                        <div align="center">
-                            <h:form>
-                                <h:outputText value="#{mensajes['clave.modificada.exito']} "/>
-                                <br/><br/>
-                                <h:commandButton value="#{etiquetas['continuar']}" action="#{cambiaClaveCtrl.cerrarExitoMp}"/>
-                            </h:form>
-                        </div>
-                    </p:dialog> 
+                   
+                  
 
                     <p:idleMonitor timeout="600000" id="idleSesion">
                         <p:ajax event="idle" listener="#{sesionCtrl.idleListener}" oncomplete="idleDialog.show()"/>
