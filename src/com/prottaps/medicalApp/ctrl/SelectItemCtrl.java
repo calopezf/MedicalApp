@@ -33,7 +33,8 @@ public class SelectItemCtrl extends BaseCtrl {
 		if (estadoEnum == null) {
 			estadoEnum = new ArrayList<SelectItem>();
 			for (EnumEstado e : EnumEstado.values()) {
-				estadoEnum.add(new SelectItem(e, e.toString()));
+				estadoEnum.add(new SelectItem(e, getBundleEtiquetas(
+						e.getEtiqueta(), null)));
 			}
 		}
 		return estadoEnum;

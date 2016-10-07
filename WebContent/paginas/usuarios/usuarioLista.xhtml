@@ -11,7 +11,7 @@
 			<p:growl id="msg" autoUpdate="true" />
 
 			<h:panelGrid columns="3" id="gridFiltros" style="width: 700px">
-				<h:panelGrid columns="2">
+				<h:panelGrid columns="2" columnClasses="form-label,form-input">
 					<h:outputText value="#{etiquetas['nombre']}" />
 					<h:inputText value="#{usuarioCtrl.usuarioFiltro.nombre}"
 						style="width:120px" />
@@ -80,7 +80,7 @@
 						<f:facet name="header">
 							<h:outputText value="#{etiquetas['estado']}" />
 						</f:facet>
-						<h:outputText value="#{etiquetas[item.estado]}" />
+						<h:outputText value="#{etiquetas[item.estado.etiqueta]}" />
 					</p:column>
 					<!--<p:column headerText="#{etiquetas['rol']}">
                         <h:outputText value="#{item.rol}"/>
@@ -88,7 +88,7 @@
                     <p:column headerText="#{etiquetas['direccion.domicilio']}" styleClass="columnaCentrada">
                         <h:selectBooleanCheckbox value="#{item.direccion}" disabled="true"/>
                     </p:column>-->
-					<p:column headerText="#{etiquetas['correoElectronico']}">
+					<p:column headerText="#{etiquetas['correoElectronico']}" style="width:200px;">
 						<h:outputText value="#{item.email}" />
 					</p:column>
 					<p:column styleClass="columnaCentrada">

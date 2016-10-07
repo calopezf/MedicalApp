@@ -30,7 +30,7 @@ a:hover{
 }
 
 #container {
-    width: 900px;
+    width: 1200px;
     margin: 0 auto;
     margin: 0 auto;
     background-color: #fff;
@@ -52,7 +52,7 @@ div.titlePage {
     font-size: 18px;
     margin-top: 5px;
     margin-bottom: 10px;
-    color: #999;
+    color: #000;
     font-weight: bold;
     padding:4px;
     /*border-bottom: 1px dotted #a9ccec;*/
@@ -116,7 +116,7 @@ div.titlePage {
 }
 
 #topSubHeader {
-    background-color: #fdedbd;/*#1d6caf;*/
+    background-color: #aed0ea ;/*#1d6caf;*/
     /*color: #fff;*/
     display: block;
     min-height: 22px;
@@ -145,7 +145,7 @@ div.titlePage {
     /*color: #444;*/
     padding: 3px;
     vertical-align: middle;
-    background-color: #eee;
+    background-color: #aed0ea;
 }
 
 .form-label2 {

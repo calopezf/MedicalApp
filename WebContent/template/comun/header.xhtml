@@ -14,7 +14,6 @@
                     <f:convertDateTime pattern="dd 'de' MMMM 'de' yyyy"/>
                 </h:outputText>
                 <h:commandLink value="Inicio" action="/paginas/index.jsf" immediate="true"/>
-                <p:commandLink value="#{etiquetas['modificar.contrasena']}" immediate="true" partialSubmit="true" onclick="cambiarClaveDgl.show();"/>
                 <a href="#{facesContext.externalContext.requestContextPath}/admin/index.jsp">Salir</a>
                 
             </h:panelGrid>
