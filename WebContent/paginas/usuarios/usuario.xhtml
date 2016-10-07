@@ -41,10 +41,6 @@
                     <f:selectItems value="#{selectItemCtrl.estadoEnum}" />
                 </h:selectOneMenu>
 
-                <h:outputLabel value="#{etiquetas['institucion']}:" /> 
-                <h:selectOneMenu value="#{usuarioCtrl.usuario.institucion.id}">
-                    <f:selectItems value="#{selectItemCtrl.institucion}" />
-                </h:selectOneMenu>
             </h:panelGrid>
             <h:outputText value="#{etiquetas['campos.obligatorios']}"  />
 

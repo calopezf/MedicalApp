@@ -17,83 +17,78 @@ import com.prottaps.medicalApp.constantes.EstadoEnum;
 @Table(name = "ROL")
 public class Rol implements Serializable {
 
-    /**
+	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 7827644225154012814L;
 	@Id
-    @Column(name = "id")
-    private String id;//atado a RolEnum
-    @Column(name = "descripcion", length = 500)
-    private String descripcion;
-    @Column(name = "estado")
-    @Enumerated(EnumType.STRING)
-    private EstadoEnum estado;
-    @ManyToMany(mappedBy = "roles")
-    private List<Usuario> usuarios;
+	@Column(name = "id")
+	private String id;// atado a RolEnum
+	@Column(name = "descripcion", length = 500)
+	private String descripcion;
+	@Column(name = "estado")
+	@Enumerated(EnumType.STRING)
+	private EstadoEnum estado;
+	@ManyToMany(mappedBy = "roles")
+	private List<Usuario> usuarios;
 
-    public List<Usuario> getUsuarios() {
-        return usuarios;
-    }
+	public List<Usuario> getUsuarios() {
+		return usuarios;
+	}
 
-    public void setUsuarios(List<Usuario> usuarios) {
-        this.usuarios = usuarios;
-    }
+	public void setUsuarios(List<Usuario> usuarios) {
+		this.usuarios = usuarios;
+	}
 
-//    @ManyToMany(fetch = FetchType.EAGER)
-//    @JoinTable(name = "usuario_rol", joinColumns = {
-//        @JoinColumn(name = "rol_id", referencedColumnName = "id")},
-//    inverseJoinColumns =
-//    @JoinColumn(name = "usuario_id", referencedColumnName = "id"))
-//    private List<Usuario> usuarios;
-//    public List<Usuario> getUsuarios() {
-//        return usuarios;
-//    }
-//
-//    public void setUsuarios(List<Usuario> usuarios) {
-//        this.usuarios = usuarios;
-//    }
-    public EstadoEnum isEstado() {
-        return getEstado();
-    }
+	// @ManyToMany(fetch = FetchType.EAGER)
+	// @JoinTable(name = "usuario_rol", joinColumns = {
+	// @JoinColumn(name = "rol_id", referencedColumnName = "id")},
+	// inverseJoinColumns =
+	// @JoinColumn(name = "usuario_id", referencedColumnName = "id"))
+	// private List<Usuario> usuarios;
+	// public List<Usuario> getUsuarios() {
+	// return usuarios;
+	// }
+	//
+	// public void setUsuarios(List<Usuario> usuarios) {
+	// this.usuarios = usuarios;
+	// }
 
-    public void setEstado(EstadoEnum estado) {
-        this.estado = estado;
-    }
+	/**
+	 * @return the id
+	 */
+	public String getId() {
+		return id;
+	}
 
-    /**
-     * @return the id
-     */
-    public String getId() {
-        return id;
-    }
+	/**
+	 * @param id
+	 *            the id to set
+	 */
+	public void setId(String id) {
+		this.id = id;
+	}
 
-    /**
-     * @param id the id to set
-     */
-    public void setId(String id) {
-        this.id = id;
-    }
+	/**
+	 * @return the descripcion
+	 */
+	public String getDescripcion() {
+		return descripcion;
+	}
 
-    /**
-     * @return the descripcion
-     */
-    public String getDescripcion() {
-        return descripcion;
-    }
+	/**
+	 * @param descripcion
+	 *            the descripcion to set
+	 */
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
 
-    /**
-     * @param descripcion the descripcion to set
-     */
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
+	public EstadoEnum getEstado() {
+		return estado;
+	}
 
-    /**
-     * @return the estado
-     */
-    public EstadoEnum getEstado() {
-        return estado;
-    }
-
+	public void setEstado(EstadoEnum estado) {
+		this.estado = estado;
+	}
 }

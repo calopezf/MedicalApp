@@ -522,7 +522,7 @@ public class BaseCtrl implements Serializable {
 
 
         ResourceBundle bundle = ResourceBundle.getBundle(
-                "ec.gob.mrl.peti.recursos.mensajes", locale,
+                "com.prottaps.medicalApp.recursos.mensajes", locale,
                 getCurrentClassLoader(params));
 
 

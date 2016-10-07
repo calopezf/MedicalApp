@@ -137,7 +137,7 @@ public class Usuario implements Serializable {
     }
 
     public boolean isTachado() {
-        if (this.estado.equals(EstadoEnum.ACTIVO)) {
+        if (this.estado.equals(EstadoEnum.ACT)) {
             tachado = true;
         } else {
             tachado = false;
