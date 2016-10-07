@@ -11,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
-import com.prottaps.medicalApp.constantes.EstadoEnum;
+import com.prottaps.medicalApp.constantes.EnumEstado;
 
 @Entity
 @Table(name = "ROL")
@@ -28,7 +28,7 @@ public class Rol implements Serializable {
 	private String descripcion;
 	@Column(name = "estado")
 	@Enumerated(EnumType.STRING)
-	private EstadoEnum estado;
+	private EnumEstado estado;
 	@ManyToMany(mappedBy = "roles")
 	private List<Usuario> usuarios;
 
@@ -84,11 +84,11 @@ public class Rol implements Serializable {
 		this.descripcion = descripcion;
 	}
 
-	public EstadoEnum getEstado() {
+	public EnumEstado getEstado() {
 		return estado;
 	}
 
-	public void setEstado(EstadoEnum estado) {
+	public void setEstado(EnumEstado estado) {
 		this.estado = estado;
 	}
 }

@@ -10,9 +10,9 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.model.SelectItem;
 
-import com.prottaps.medicalApp.constantes.EstadoCivilEnum;
-import com.prottaps.medicalApp.constantes.EstadoEnum;
-import com.prottaps.medicalApp.constantes.RolEnum;
+import com.prottaps.medicalApp.constantes.EnumEstadoCivil;
+import com.prottaps.medicalApp.constantes.EnumEstado;
+import com.prottaps.medicalApp.constantes.EnumRol;
 
 /**
  *
@@ -32,7 +32,7 @@ public class SelectItemCtrl extends BaseCtrl {
 	public List<SelectItem> getEstadoEnum() {
 		if (estadoEnum == null) {
 			estadoEnum = new ArrayList<SelectItem>();
-			for (EstadoEnum e : EstadoEnum.values()) {
+			for (EnumEstado e : EnumEstado.values()) {
 				estadoEnum.add(new SelectItem(e, e.toString()));
 			}
 		}
@@ -46,7 +46,7 @@ public class SelectItemCtrl extends BaseCtrl {
 	public List<SelectItem> getRolEnum() {
 		if (rolEnum == null) {
 			rolEnum = new ArrayList<SelectItem>();
-			for (RolEnum re : RolEnum.values()) {
+			for (EnumRol re : EnumRol.values()) {
 				rolEnum.add(new SelectItem(re, re.toString()));
 			}
 		}
@@ -60,7 +60,7 @@ public class SelectItemCtrl extends BaseCtrl {
 	public List<SelectItem> getEstadoCivil() {
 		if (estadoCivil == null) {
 			estadoCivil = new ArrayList<SelectItem>();
-			for (EstadoCivilEnum ec : EstadoCivilEnum.values()) {
+			for (EnumEstadoCivil ec : EnumEstadoCivil.values()) {
 				estadoCivil.add(new SelectItem(ec, ec.getEtiqueta()));
 			}
 		}

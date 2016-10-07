@@ -38,7 +38,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.prottaps.medicalApp.constantes.RolEnum;
+import com.prottaps.medicalApp.constantes.EnumRol;
 import com.prottaps.medicalApp.modelo.Usuario;
 
 /**
@@ -767,19 +767,19 @@ public class BaseCtrl implements Serializable {
     }
 
     public boolean isAdministrador() {
-        return isUserInRole(RolEnum.ADMINISTRADOR.toString());
+        return isUserInRole(EnumRol.ADMINISTRADOR.toString());
     }
 
     public boolean isMedico() {
-        return isUserInRole(RolEnum.MEDICO.toString());
+        return isUserInRole(EnumRol.MEDICO.toString());
     }
 
     public boolean isAsistente() {
-        return isUserInRole(RolEnum.ASISTENTE.toString());
+        return isUserInRole(EnumRol.ASISTENTE.toString());
     }
 
     public boolean isPaciente() {
-        return isUserInRole(RolEnum.PACIENTE.toString());
+        return isUserInRole(EnumRol.PACIENTE.toString());
     }
 
 //    protected String generarFicha(Long idAspiranteLong, String cedulaAspirante) {

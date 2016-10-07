@@ -10,7 +10,7 @@ import java.io.Serializable;
  *
  * @author cristian
  */
-public enum RolEnum implements Serializable {
+public enum EnumRol implements Serializable {
 
     ADMINISTRADOR, MEDICO, PACIENTE, ASISTENTE;
 }

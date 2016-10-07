@@ -15,8 +15,8 @@ import com.prottaps.medicalApp.crud.ServicioCrud;
 import com.prottaps.medicalApp.ctrl.BaseCtrl;
 import com.prottaps.medicalApp.modelo.Rol;
 import com.prottaps.medicalApp.modelo.Usuario;
-import com.prottaps.medicalApp.servicio.RolServicio;
-import com.prottaps.medicalApp.servicio.UsuarioServicio;
+import com.prottaps.medicalApp.servicio.ServicioRol;
+import com.prottaps.medicalApp.servicio.ServicioUsuario;
 
 @ManagedBean(name = "usuarioCtrl")
 @ViewScoped
@@ -28,11 +28,11 @@ public class UsuarioCtrl extends BaseCtrl {
 	private static final long serialVersionUID = 1L;
 	// TODO serializable de la clase: Usuario
 	@EJB
-	private UsuarioServicio usuarioServicio;
+	private ServicioUsuario usuarioServicio;
 	@EJB
 	private ServicioCrud servicioCrud;
 	@EJB
-	private RolServicio rolServicio;
+	private ServicioRol rolServicio;
 	private Usuario usuario;
 	private Usuario usuarioFiltro;
 	private Map<String, String> roles;
@@ -162,19 +162,19 @@ public class UsuarioCtrl extends BaseCtrl {
 		this.rolesSeleccionados = rolesSeleccionados;
 	}
 
-	public UsuarioServicio getUsuarioServicio() {
+	public ServicioUsuario getUsuarioServicio() {
 		return usuarioServicio;
 	}
 
-	public void setUsuarioServicio(UsuarioServicio usuarioServicio) {
+	public void setUsuarioServicio(ServicioUsuario usuarioServicio) {
 		this.usuarioServicio = usuarioServicio;
 	}
 
-	public RolServicio getRolServicio() {
+	public ServicioRol getRolServicio() {
 		return rolServicio;
 	}
 
-	public void setRolServicio(RolServicio rolServicio) {
+	public void setRolServicio(ServicioRol rolServicio) {
 		this.rolServicio = rolServicio;
 	}
 

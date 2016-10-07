@@ -11,18 +11,18 @@ import java.util.List;
  *
  * @author saviasoft4
  */
-public enum EstadoCivilEnum {
+public enum EnumEstadoCivil {
     
     SOLTERO("Soltero"), CASADO("Casado"), DIVORCIADO("Divorciado"), UNION_LIBRE("Uni\u00F3n Libre");
     
     private String etiqueta;
     
-    private EstadoCivilEnum(String etiqueta){
+    private EnumEstadoCivil(String etiqueta){
         this.etiqueta=etiqueta;
     }
 
-    public static List<EstadoCivilEnum> getEstadoCivilEnumList() {
-        return Arrays.asList(EstadoCivilEnum.values());
+    public static List<EnumEstadoCivil> getEstadoCivilEnumList() {
+        return Arrays.asList(EnumEstadoCivil.values());
     }
 
     public String getEtiqueta() {

@@ -11,12 +11,12 @@ import java.util.List;
  *
  * @author saviasoft4
  */
-public enum SexoEnum {
+public enum EnumSexo {
     
     MASCULINO, FEMENINO;
 
-    public static List<SexoEnum> getSexoEnumList() {
-        return Arrays.asList(SexoEnum.values());
+    public static List<EnumSexo> getSexoEnumList() {
+        return Arrays.asList(EnumSexo.values());
     }
     
 }

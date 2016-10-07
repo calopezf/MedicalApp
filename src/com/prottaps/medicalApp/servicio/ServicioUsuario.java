@@ -16,7 +16,7 @@ import com.prottaps.medicalApp.modelo.Usuario;
 
 @Stateless(name = "UsuarioServicio")
 @LocalBean
-public class UsuarioServicio {
+public class ServicioUsuario {
 
 @EJB
 private ServicioCrud servicioCrud;

@@ -9,7 +9,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 import com.prottaps.medicalApp.modelo.Usuario;
-import com.prottaps.medicalApp.servicio.UsuarioServicio;
+import com.prottaps.medicalApp.servicio.ServicioUsuario;
 
 /**
  *
@@ -24,7 +24,7 @@ public class SesionCtrl extends BaseCtrl {
 	 */
 	private static final long serialVersionUID = 1L;
 	@EJB
-	private UsuarioServicio usuarioServicio;
+	private ServicioUsuario usuarioServicio;
 	private Usuario usuarioLogueado;
 
 	public void idleListener() {

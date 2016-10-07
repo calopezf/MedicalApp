@@ -1,6 +1,6 @@
 package com.prottaps.medicalApp.constantes;
 
-public enum EstadoEnum {
+public enum EnumEstado {
 
 	ACT, INA;
 

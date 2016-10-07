@@ -15,7 +15,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
-import com.prottaps.medicalApp.constantes.EstadoEnum;
+import com.prottaps.medicalApp.constantes.EnumEstado;
 
 @Entity
 @Table(name = "USUARIO")
@@ -30,7 +30,7 @@ public class Usuario implements Serializable {
     private String apellido;
     @Column(name = "estado")
     @Enumerated(EnumType.STRING)
-    private EstadoEnum estado;
+    private EnumEstado estado;
     @Column(name = "direccion", length = 255)
     private String direccion;
     @Column(name = "password", length = 64)
@@ -80,11 +80,11 @@ public class Usuario implements Serializable {
         this.registroNuevo = registroNuevo;
     }
 
-    public EstadoEnum getEstado() {
+    public EnumEstado getEstado() {
         return estado;
     }
 
-    public void setEstado(EstadoEnum estado) {
+    public void setEstado(EnumEstado estado) {
         this.estado = estado;
     }
 
@@ -137,7 +137,7 @@ public class Usuario implements Serializable {
     }
 
     public boolean isTachado() {
-        if (this.estado.equals(EstadoEnum.ACT)) {
+        if (this.estado.equals(EnumEstado.ACT)) {
             tachado = true;
         } else {
             tachado = false;
