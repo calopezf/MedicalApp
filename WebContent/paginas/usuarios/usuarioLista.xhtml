@@ -9,26 +9,24 @@
 	<ui:define name="content">
 		<h:form id="formUsuarioLista">
 			<p:growl id="msg" autoUpdate="true" />
-
-			<h:panelGrid columns="3" id="gridFiltros" style="width: 700px">
-				<h:panelGrid columns="2" columnClasses="form-label,form-input">
-					<h:outputText value="#{etiquetas['nombre']}" />
-					<h:inputText value="#{usuarioCtrl.usuarioFiltro.nombre}"
-						style="width:120px" />
-					<h:outputText value="#{etiquetas['apellido']}" />
-					<h:inputText style="width:120px"
-						value="#{usuarioCtrl.usuarioFiltro.apellido}"></h:inputText>
-					<h:outputText value="#{etiquetas['identificacion']}" />
-					<h:inputText style="width:120px"
-						value="#{usuarioCtrl.usuarioFiltro.identificacion}"></h:inputText>
-				</h:panelGrid>
-				<h:panelGrid columns="2">
-					<h:commandButton image="/img/view.png"
+			<h:panelGrid columns="2">
+				<h:panelGrid columns="2" id="gridFiltros" style="width: 700px">
+					<h:panelGrid columns="2" columnClasses="form-label,form-input">
+						<h:outputText value="#{etiquetas['nombre']}" />
+						<h:inputText value="#{usuarioCtrl.usuarioFiltro.nombre}"
+							style="width:120px" />
+						<h:outputText value="#{etiquetas['apellido']}" />
+						<h:inputText style="width:120px"
+							value="#{usuarioCtrl.usuarioFiltro.apellido}"></h:inputText>
+						<h:outputText value="#{etiquetas['identificacion']}" />
+						<h:inputText style="width:120px"
+							value="#{usuarioCtrl.usuarioFiltro.identificacion}"></h:inputText>
+					</h:panelGrid>
+					<h:commandButton image="/img/view.png" style="align: right;"
 						action="#{usuarioCtrl.buscar}" title="#{etiquetas.buscar}">
 						<p:ajax update="itemsPanel" process="gridFiltros" />
 					</h:commandButton>
 				</h:panelGrid>
-
 				<h:commandLink
 					action="/paginas/usuarios/usuario?faces-redirect=true"
 					title="#{etiquetas['crear.nuevo']}"
@@ -38,7 +36,6 @@
 						<h:outputText value="#{etiquetas['crear.nuevo']}" />
 					</h:panelGrid>
 				</h:commandLink>
-
 			</h:panelGrid>
 
 			<h:panelGroup id="itemsPanel">
@@ -88,7 +85,8 @@
                     <p:column headerText="#{etiquetas['direccion.domicilio']}" styleClass="columnaCentrada">
                         <h:selectBooleanCheckbox value="#{item.direccion}" disabled="true"/>
                     </p:column>-->
-					<p:column headerText="#{etiquetas['correoElectronico']}" style="width:200px;">
+					<p:column headerText="#{etiquetas['correoElectronico']}"
+						style="width:200px;">
 						<h:outputText value="#{item.email}" />
 					</p:column>
 					<p:column styleClass="columnaCentrada">
