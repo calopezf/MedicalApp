@@ -1,0 +1,35 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                template="/template/general.xhtml"
+                xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="title">
+        <h:outputText value="Pruebaaaaa" />
+    </ui:define>
+
+    <ui:define name="content">
+        <h:form id="formParametros">
+            <div align="center">
+                <br/>
+                <h:outputText value="#{etiquetas['campos.obligatorios']}"  />
+                <br/>
+                <br/>
+                <p:editor></p:editor>
+                <p:commandButton value="Insertar Persona" actionListener="#{pruebaCtrl.insertarPersonaPrueba()}" immediate="true"/> 
+<!--                 <p:commandLink title="Prueba"> -->
+<!--                     <h:panelGrid style="text-align:center"> -->
+<!--                         <h:graphicImage value="/img/guardar.png" title="Prueba"/> -->
+<!--                         <h:outputText value="Insertar Persona"/> -->
+<!--                     </h:panelGrid> -->
+<!--                 </p:commandLink> -->
+
+            </div>
+
+
+        </h:form>
+  
+    </ui:define>
+
+</ui:composition>
