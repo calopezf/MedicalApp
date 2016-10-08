@@ -14,7 +14,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
 import com.prottaps.medicalApp.ctrl.base.BaseCtrl;
-import com.prottaps.medicalApp.servicio.PersonaServicio;
+import com.prottaps.medicalApp.servicio.ServicioPersona;
 
 /**
  * @author Daniel Cardenas
@@ -27,10 +27,10 @@ public class PruebaCtrl extends BaseCtrl implements Serializable {
 	private static final long serialVersionUID = 7536975529010495547L;
 	
 	@EJB
-	private PersonaServicio personaServicio;
+	private ServicioPersona servicioPersona;
 	
 	public void insertarPersonaPrueba() {
-		this.personaServicio.insertPersonaPrueba();
+		this.servicioPersona.insertPersonaPrueba();
 	}
 
 }
